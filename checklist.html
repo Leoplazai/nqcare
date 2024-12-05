@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checklist - Spruces Cleaning Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #01c6a0; /* Aqua */
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .content {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .checklist-form {
+            margin-top: 20px;
+        }
+
+        .task-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        .task-item:last-child {
+            border-bottom: none;
+        }
+
+        .task-item input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        .task-label {
+            flex: 1;
+            font-weight: 500;
+        }
+
+        .task-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+
+        .task-actions input[type="file"] {
+            margin-bottom: 10px;
+        }
+
+        .task-comments {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        /* Styles for Hyper Care tasks (grayed out and disabled) */
+        .hyper-care {
+            opacity: 0.5;
+        }
+
+        .hyper-care .task-label::after {
+            content: " (Upgrade Needed)";
+            font-size: 14px;
+            color: #cc0000;
+            margin-left: 5px;
+        }
+
+        .hyper-care input[type="checkbox"],
+        .hyper-care input[type="file"],
+        .hyper-care .task-comments {
+            cursor: not-allowed;
+        }
+
+        .hyper-care input[type="checkbox"] {
+            pointer-events: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #183630;
+            background-color: #f3f1c0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+            .task-label {
+                font-size: 14px;
+            }
+            .task-actions input[type="file"] {
+                margin-bottom: 5px;
+            }
+            .task-comments {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Clinic Cleaning Checklist</h1>
+</header>
+
+<div class="content">
+    <h2>Daily Cleaning Tasks</h2>
+    <p>Please tick off the completed tasks, upload any relevant photos, and add comments if necessary.</p>
+
+    <form class="checklist-form" action="#" method="post" enctype="multipart/form-data">
+
+        <!-- Standard Task Example -->
+        <div class="task-item">
+            <input type="checkbox" name="vacuum_floors" id="vacuum_floors">
+            <label for="vacuum_floors" class="task-label">Vacuum and mop floors</label>
+            <div class="task-actions">
+                <input type="file" name="vacuum_floors_photo" accept="image/*">
+                <textarea name="vacuum_floors_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+            </div>
+        </div>
+
+        <!-- Another Standard Task -->
+        <div class="task-item">
+            <input type="checkbox" name="dust_surfaces" id="dust_surfaces">
+            <label for="dust_surfaces" class="task-label">Dust and wipe down surfaces</label>
+            <div class="task-actions">
+                <input type="file" name="dust_surfaces_photo" accept="image/*">
+                <textarea name="dust_surfaces_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+            </div>
+        </div>
+
+        <!-- Hyper Care Task (Grayed out, upgrade needed) -->
+        <div class="task-item hyper-care">
+            <input type="checkbox" name="deep_clean_surgical" id="deep_clean_surgical" disabled>
+            <label for="deep_clean_surgical" class="task-label">Deep clean surgical rooms</label>
+            <div class="task-actions">
+                <input type="file" name="deep_clean_surgical_photo" accept="image/*" disabled>
+                <textarea name="deep_clean_surgical_comment" class="task-comments" placeholder="Comments (optional)" disabled></textarea>
+            </div>
+        </div>
+
+        <!-- Another Hyper Care Task -->
+        <div class="task-item hyper-care">
+            <input type="checkbox" name="do_dishes" id="do_dishes" disabled>
+            <label for="do_dishes" class="task-label">Do the dishes</label>
+            <div class="task-actions">
+                <input type="file" name="do_dishes_photo" accept="image/*" disabled>
+                <textarea name="do_dishes_comment" class="task-comments" placeholder="Comments (optional)" disabled></textarea>
+            </div>
+        </div>
+
+        <div style="margin-top:20px; text-align:center;">
+            <button type="submit" style="background:#01c6a0; color:#fff; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">Submit Checklist</button>
+        </div>
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2024 Spruces Cleaning Company</p>
+</footer>
+
+</body>
+</html>
