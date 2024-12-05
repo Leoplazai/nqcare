@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NQCARE Veterinary Cleaning Services Proposal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        header {
+            background-color: #01c6a0; /* Aqua */
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        header h2 {
+            margin-top: 10px;
+            font-size: 24px;
+        }
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        nav a {
+            color: #ffffff;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            nav {
+                position: static;
+                margin-top: 10px;
+                text-align: center;
+            }
+            nav a {
+                display: inline-block;
+                margin: 0 10px;
+            }
+        }
+        .intro {
+            padding: 20px;
+        }
+        .pricing-table {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f3f1c0; /* Lemon */
+        }
+        .plan {
+            background-color: #ffffff;
+            border: 1px solid #183630; /* Forest */
+            border-radius: 5px;
+            margin: 10px;
+            flex: 1;
+            max-width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(24,54,48,0.1);
+            transition: transform 0.3s;
+        }
+        .plan:hover {
+            transform: scale(1.05);
+        }
+        .plan-header {
+            background-color: #c7de6b; /* Lime */
+            padding: 20px;
+            border-bottom: 1px solid #183630;
+        }
+        .plan-header h2 {
+            margin: 0;
+        }
+        .plan-price {
+            font-size: 24px;
+            color: #183630;
+        }
+        .plan-features {
+            list-style-type: none;
+            padding: 20px;
+            text-align: left;
+            min-height: 180px;
+        }
+        .plan-features li {
+            padding: 5px 0;
+            border-bottom: 1px solid #f3f1c0;
+        }
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+        .plan-signup {
+            padding: 20px;
+        }
+        .plan-signup a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #01c6a0;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #183630;
+            padding: 10px;
+            text-align: center;
+        }
+        .comparison-table th {
+            background-color: #c7de6b;
+        }
+        .checkmark {
+            color: #01c6a0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .guarantee {
+            background-color: #c7de6b;
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        .guarantee h2 {
+            margin-top: 0;
+        }
+        .terms {
+            padding: 20px;
+        }
+        .terms ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+        footer {
+            background-color: #183630;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
+            header h2 {
+                font-size: 18px;
+            }
+            .plan {
+                max-width: 100%;
+            }
+            .plan-features {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>NQCARE</h1>
+    <h2>Veterinary Cleaning Services Proposal</h2>
+    <p>For 232 Woolcock St, Currajong QLD 4812, Australia | <a href="https://nqcare.com.au" style="color:#ffffff;">nqcare.com.au</a></p>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+</header>
+
+<div class="intro" id="home">
+    <h2>Introduction</h2>
+    <p>We are pleased to present our tailored cleaning service proposal for your veterinary facility. We offer three service levels: <strong>Ultra Basic</strong>, <strong>Enhanced Care</strong>, and <strong>Hyper Care</strong> to meet your specific needs, ensuring a clean, hygienic, and welcoming environment for both pets and their owners.</p>
+</div>
+
+<div class="pricing-table">
+    <!-- Ultra Basic Plan -->
+    <div class="plan">
+        <div class="plan-header">
+            <h2>Ultra Basic</h2>
+            <p class="plan-price">$840/week</p>
+        </div>
+        <ul class="plan-features">
+            <li>Basic daily cleaning</li>
+            <li>No monthly deep cleaning</li>
+            <li>No kitchen dishes</li>
+        </ul>
+        <div class="plan-signup">
+            <a href="https://form.typeform.com/to/EjeSVTHX#facility_type=UltraBasic">Select Plan</a>
+        </div>
+    </div>
+
+    <!-- Enhanced Care Plan -->
+    <div class="plan">
+        <div class="plan-header">
+            <h2>Enhanced Care</h2>
+            <p class="plan-price">$960/week</p>
+        </div>
+        <ul class="plan-features">
+            <li>Includes deeper cleaning tasks</li>
+            <li>Monthly deep cleaning included</li>
+            <li>Some additional care and sanitization</li>
+            <li>Eligible for a 6% discount on annual commitment</li>
+        </ul>
+        <div class="plan-signup">
+            <a href="https://form.typeform.com/to/EjeSVTHX#facility_type=EnhancedCare">Select Plan</a>
+        </div>
+    </div>
+
+    <!-- Hyper Care Plan -->
+    <div class="plan">
+        <div class="plan-header">
+            <h2>Hyper Care</h2>
+            <p class="plan-price">$1,150/week</p>
+        </div>
+        <ul class="plan-features">
+            <li>Hyper-level cleaning and sanitization</li>
+            <li>Monthly deep cleaning</li>
+            <li>Longer visits and detailed reporting</li>
+            <li>Includes doing the dishes and comprehensive support</li>
+        </ul>
+        <div class="plan-signup">
+            <a href="https://form.typeform.com/to/EjeSVTHX#facility_type=HyperCare">Select Plan</a>
+        </div>
+    </div>
+</div>
+
+<div class="intro">
+    <h2>Service Comparison</h2>
+    <table class="comparison-table">
+        <tr>
+            <th>Features</th>
+            <th>Ultra Basic</th>
+            <th>Enhanced Care</th>
+            <th>Hyper Care</th>
+        </tr>
+        <tr>
+            <td>Vacuum & Mop Floors</td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Dust & Wipe Surfaces</td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Sanitize High-Touch Areas</td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Remove Pet Hair (Waiting Area)</td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Empty Bins</td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Clean Exam Rooms & Reception Area</td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Monthly Deep Cleaning</td>
+            <td></td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Clean Windows (Monthly)</td>
+            <td></td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Disinfect Animal Kennels & Cages</td>
+            <td></td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Clean Microwaves & Fridges</td>
+            <td></td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Do the Dishes</td>
+            <td></td>
+            <td></td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Deep Cleaning Surgical Rooms</td>
+            <td></td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Longer Visits</td>
+            <td></td>
+            <td></td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Detailed Reporting</td>
+            <td></td>
+            <td></td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>Unlimited Fix-Ups</td>
+            <td></td>
+            <td class="checkmark">&#10003;</td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+        <tr>
+            <td>24/7 Support & Same Day Response</td>
+            <td></td>
+            <td></td>
+            <td class="checkmark">&#10003;</td>
+        </tr>
+    </table>
+</div>
+
+<div class="intro">
+    <h2>Guarantee</h2>
+    <div class="guarantee">
+        <h2>Our Promise to You</h2>
+        <p>If you're not satisfied, we will send someone back the same day to address any issues at no extra cost. The Enhanced Care and Hyper Care plans include unlimited fix-ups. Hyper Care also comes with 24/7 support and same-day response for extra cleaning needs.</p>
+    </div>
+</div>
+
+<div class="terms">
+    <h2>Terms and Conditions</h2>
+    <ul>
+        <li><strong>Payment Terms:</strong> Invoices issued weekly, payment due within 14 days. For Enhanced Care, enjoy a 6% discount on an annual commitment.</li>
+        <li><strong>Contract Duration:</strong> No lock-in contract required, but discounts apply for longer commitments.</li>
+        <li><strong>Supplies and Equipment:</strong> All cleaning supplies and equipment are provided by NQCARE.</li>
+        <li><strong>Cancellation Policy:</strong> A notice period of 30 days is required for any cancellations or rescheduling.</li>
+    </ul>
+</div>
+
+<footer id="contact">
+    <p>&copy; 2024 NQCARE</p>
+    <p>Contact us at <a href="mailto:info@nqcare.com.au" style="color:#ffffff;">info@nqcare.com.au</a> or call us at <a href="tel:+61xxxxxxxxx" style="color:#ffffff;">+61 (X) XXXX XXXX</a></p>
+</footer>
+
+</body>
+</html>
