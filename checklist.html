@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Checklist - Spruces Cleaning Company</title>
+    <title>Clinic Cleaning Checklist</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -35,6 +35,11 @@
         h2 {
             font-size: 24px;
             margin-top: 0;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
         }
 
         .checklist-form {
@@ -82,7 +87,6 @@
             border-radius: 3px;
         }
 
-        /* Styles for Hyper Care tasks (grayed out and disabled) */
         .hyper-care {
             opacity: 0.5;
         }
@@ -104,6 +108,26 @@
             pointer-events: none;
         }
 
+        .cta-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .cta-button {
+            background-color: #01c6a0;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #0f241e;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -112,7 +136,6 @@
             background-color: #f3f1c0;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 600px) {
             header h1 {
                 font-size: 24px;
@@ -136,59 +159,167 @@
 </header>
 
 <div class="content">
-    <h2>Daily Cleaning Tasks</h2>
-    <p>Please tick off the completed tasks, upload any relevant photos, and add comments if necessary.</p>
+    <h2>Daily & Monthly Cleaning Tasks</h2>
+    <p>Please tick off completed tasks, upload any relevant photos, and add comments if necessary. Tasks requiring Hyper Care are grayed out and marked as "Upgrade Needed".</p>
 
     <form class="checklist-form" action="#" method="post" enctype="multipart/form-data">
 
-        <!-- Standard Task Example -->
+        <!-- Standard (Available) Tasks -->
         <div class="task-item">
-            <input type="checkbox" name="vacuum_floors" id="vacuum_floors">
-            <label for="vacuum_floors" class="task-label">Vacuum and mop floors</label>
+            <input type="checkbox" name="vacuum_mop" id="vacuum_mop">
+            <label for="vacuum_mop" class="task-label">Vacuum & Mop Floors</label>
             <div class="task-actions">
-                <input type="file" name="vacuum_floors_photo" accept="image/*">
-                <textarea name="vacuum_floors_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+                <input type="file" name="vacuum_mop_photo" accept="image/*">
+                <textarea name="vacuum_mop_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
             </div>
         </div>
 
-        <!-- Another Standard Task -->
         <div class="task-item">
-            <input type="checkbox" name="dust_surfaces" id="dust_surfaces">
-            <label for="dust_surfaces" class="task-label">Dust and wipe down surfaces</label>
+            <input type="checkbox" name="dust_wipe" id="dust_wipe">
+            <label for="dust_wipe" class="task-label">Dust & Wipe Surfaces</label>
             <div class="task-actions">
-                <input type="file" name="dust_surfaces_photo" accept="image/*">
-                <textarea name="dust_surfaces_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+                <input type="file" name="dust_wipe_photo" accept="image/*">
+                <textarea name="dust_wipe_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
             </div>
         </div>
 
-        <!-- Hyper Care Task (Grayed out, upgrade needed) -->
-        <div class="task-item hyper-care">
-            <input type="checkbox" name="deep_clean_surgical" id="deep_clean_surgical" disabled>
-            <label for="deep_clean_surgical" class="task-label">Deep clean surgical rooms</label>
+        <div class="task-item">
+            <input type="checkbox" name="sanitize_high_touch" id="sanitize_high_touch">
+            <label for="sanitize_high_touch" class="task-label">Sanitize High-Touch Areas</label>
             <div class="task-actions">
-                <input type="file" name="deep_clean_surgical_photo" accept="image/*" disabled>
-                <textarea name="deep_clean_surgical_comment" class="task-comments" placeholder="Comments (optional)" disabled></textarea>
+                <input type="file" name="sanitize_high_touch_photo" accept="image/*">
+                <textarea name="sanitize_high_touch_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
             </div>
         </div>
 
-        <!-- Another Hyper Care Task -->
+        <div class="task-item">
+            <input type="checkbox" name="remove_pet_hair" id="remove_pet_hair">
+            <label for="remove_pet_hair" class="task-label">Remove Pet Hair (Waiting Area)</label>
+            <div class="task-actions">
+                <input type="file" name="remove_pet_hair_photo" accept="image/*">
+                <textarea name="remove_pet_hair_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+            </div>
+        </div>
+
+        <div class="task-item">
+            <input type="checkbox" name="empty_bins" id="empty_bins">
+            <label for="empty_bins" class="task-label">Empty Bins</label>
+            <div class="task-actions">
+                <input type="file" name="empty_bins_photo" accept="image/*">
+                <textarea name="empty_bins_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+            </div>
+        </div>
+
+        <div class="task-item">
+            <input type="checkbox" name="clean_exam_reception" id="clean_exam_reception">
+            <label for="clean_exam_reception" class="task-label">Clean Exam Rooms & Reception Area</label>
+            <div class="task-actions">
+                <input type="file" name="clean_exam_reception_photo" accept="image/*">
+                <textarea name="clean_exam_reception_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+            </div>
+        </div>
+
+        <!-- Enhanced (Available) Tasks -->
+        <div class="task-item">
+            <input type="checkbox" name="monthly_deep_cleaning" id="monthly_deep_cleaning">
+            <label for="monthly_deep_cleaning" class="task-label">Monthly Deep Cleaning</label>
+            <div class="task-actions">
+                <input type="file" name="monthly_deep_cleaning_photo" accept="image/*">
+                <textarea name="monthly_deep_cleaning_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+            </div>
+        </div>
+
+        <div class="task-item">
+            <input type="checkbox" name="clean_windows" id="clean_windows">
+            <label for="clean_windows" class="task-label">Clean Windows (Monthly)</label>
+            <div class="task-actions">
+                <input type="file" name="clean_windows_photo" accept="image/*">
+                <textarea name="clean_windows_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+            </div>
+        </div>
+
+        <div class="task-item">
+            <input type="checkbox" name="disinfect_kennels" id="disinfect_kennels">
+            <label for="disinfect_kennels" class="task-label">Disinfect Animal Kennels & Cages</label>
+            <div class="task-actions">
+                <input type="file" name="disinfect_kennels_photo" accept="image/*">
+                <textarea name="disinfect_kennels_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+            </div>
+        </div>
+
+        <div class="task-item">
+            <input type="checkbox" name="clean_microwaves_fridges" id="clean_microwaves_fridges">
+            <label for="clean_microwaves_fridges" class="task-label">Clean Microwaves & Fridges</label>
+            <div class="task-actions">
+                <input type="file" name="clean_microwaves_fridges_photo" accept="image/*">
+                <textarea name="clean_microwaves_fridges_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+            </div>
+        </div>
+
+        <div class="task-item">
+            <input type="checkbox" name="deep_clean_surgical" id="deep_clean_surgical">
+            <label for="deep_clean_surgical" class="task-label">Deep Cleaning Surgical Rooms</label>
+            <div class="task-actions">
+                <input type="file" name="deep_clean_surgical_photo" accept="image/*">
+                <textarea name="deep_clean_surgical_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+            </div>
+        </div>
+
+        <div class="task-item">
+            <input type="checkbox" name="unlimited_fix_ups" id="unlimited_fix_ups">
+            <label for="unlimited_fix_ups" class="task-label">Unlimited Fix-Ups</label>
+            <div class="task-actions">
+                <input type="file" name="unlimited_fix_ups_photo" accept="image/*">
+                <textarea name="unlimited_fix_ups_comment" class="task-comments" placeholder="Comments (optional)"></textarea>
+            </div>
+        </div>
+
+        <!-- Hyper Care (Upgrade Needed) Tasks -->
         <div class="task-item hyper-care">
             <input type="checkbox" name="do_dishes" id="do_dishes" disabled>
-            <label for="do_dishes" class="task-label">Do the dishes</label>
+            <label for="do_dishes" class="task-label">Do the Dishes</label>
             <div class="task-actions">
                 <input type="file" name="do_dishes_photo" accept="image/*" disabled>
                 <textarea name="do_dishes_comment" class="task-comments" placeholder="Comments (optional)" disabled></textarea>
             </div>
         </div>
 
-        <div style="margin-top:20px; text-align:center;">
-            <button type="submit" style="background:#01c6a0; color:#fff; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">Submit Checklist</button>
+        <div class="task-item hyper-care">
+            <input type="checkbox" name="longer_visits" id="longer_visits" disabled>
+            <label for="longer_visits" class="task-label">Longer Visits</label>
+            <div class="task-actions">
+                <input type="file" name="longer_visits_photo" accept="image/*" disabled>
+                <textarea name="longer_visits_comment" class="task-comments" placeholder="Comments (optional)" disabled></textarea>
+            </div>
+        </div>
+
+        <div class="task-item hyper-care">
+            <input type="checkbox" name="detailed_reporting" id="detailed_reporting" disabled>
+            <label for="detailed_reporting" class="task-label">Detailed Reporting</label>
+            <div class="task-actions">
+                <input type="file" name="detailed_reporting_photo" accept="image/*" disabled>
+                <textarea name="detailed_reporting_comment" class="task-comments" placeholder="Comments (optional)" disabled></textarea>
+            </div>
+        </div>
+
+        <div class="task-item hyper-care">
+            <input type="checkbox" name="support_same_day" id="support_same_day" disabled>
+            <label for="support_same_day" class="task-label">24/7 Support & Same Day Response</label>
+            <div class="task-actions">
+                <input type="file" name="support_same_day_photo" accept="image/*" disabled>
+                <textarea name="support_same_day_comment" class="task-comments" placeholder="Comments (optional)" disabled></textarea>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <!-- Instead of submit, this now says "Sign Up Now" and links to typeform -->
+            <a href="https://form.typeform.com/to/EjeSVTHX#facility_type=HyperCare" class="cta-button">Sign Up Now</a>
         </div>
     </form>
 </div>
 
 <footer>
-    <p>&copy; 2024 Spruces Cleaning Company</p>
+    <p>© 2024 Spruces Cleaning Company</p>
 </footer>
 
 </body>
